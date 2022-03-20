@@ -17,6 +17,7 @@ specifiers:
   eslint-config-next: 12.1.0
   ethereum-waffle: ^4.0.0-alpha.0
   framer-motion: ^6
+  graphql: ^16.3.0
   hardhat: ^2.9.1
   next: 12.1.0
   react: 17.0.2
@@ -25,7 +26,7 @@ specifiers:
   web3modal: ^1.9.5
 
 dependencies:
-  '@apollo/client': 3.5.10_react@17.0.2
+  '@apollo/client': 3.5.10_graphql@16.3.0+react@17.0.2
   '@chakra-ui/react': 1.8.6_b5697210a848410573c38bcd7b4427f0
   '@emotion/react': 11.8.2_00d6772dea80510e818fd171caaa025a
   '@emotion/styled': 11.8.1_19c9b884401318110e0b35fad34f7b03
@@ -37,6 +38,7 @@ dependencies:
   dotenv: 16.0.0
   ethereum-waffle: 4.0.0-alpha.0_typescript@4.6.2
   framer-motion: 6.2.8_react-dom@17.0.2+react@17.0.2
+  graphql: 16.3.0
   hardhat: 2.9.1
   next: 12.1.0_react-dom@17.0.2+react@17.0.2
   react: 17.0.2
@@ -52,7 +54,7 @@ devDependencies:
 
 packages:
 
-  /@apollo/client/3.5.10_react@17.0.2:
+  /@apollo/client/3.5.10_graphql@16.3.0+react@17.0.2:
     resolution: {integrity: sha512-tL3iSpFe9Oldq7gYikZK1dcYxp1c01nlSwtsMz75382HcI6fvQXyFXUCJTTK3wgO2/ckaBvRGw7VqjFREdVoRw==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
@@ -67,11 +69,12 @@ packages:
       subscriptions-transport-ws:
         optional: true
     dependencies:
-      '@graphql-typed-document-node/core': 3.1.1
+      '@graphql-typed-document-node/core': 3.1.1_graphql@16.3.0
       '@wry/context': 0.6.1
       '@wry/equality': 0.5.2
       '@wry/trie': 0.3.1
-      graphql-tag: 2.12.6
+      graphql: 16.3.0
+      graphql-tag: 2.12.6_graphql@16.3.0
       hoist-non-react-statics: 3.3.2
       optimism: 0.16.1
       prop-types: 15.8.1
@@ -1723,10 +1726,12 @@ packages:
       '@ethersproject/strings': 5.6.0
     dev: false
 
-  /@graphql-typed-document-node/core/3.1.1:
+  /@graphql-typed-document-node/core/3.1.1_graphql@16.3.0:
     resolution: {integrity: sha512-NQ17ii0rK1b34VZonlmT2QMJFI70m0TRwbknO/ihlbatXyaktDhN/98vBiUU6kNBPljqGqyIrl2T4nY2RpFANg==}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      graphql: 16.3.0
     dev: false
 
   /@humanwhocodes/config-array/0.9.5:
@@ -6047,13 +6052,19 @@ packages:
     resolution: {integrity: sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==}
     dev: false
 
-  /graphql-tag/2.12.6:
+  /graphql-tag/2.12.6_graphql@16.3.0:
     resolution: {integrity: sha512-FdSNcu2QQcWnM2VNvSCCDCVS5PpPqpzgFT8+GXzqJuoDd0CBncxCY278u4mhRO7tMgo2JjgJA5aZ+nWSQ/Z+xg==}
     engines: {node: '>=10'}
     peerDependencies:
       graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
+      graphql: 16.3.0
       tslib: 2.3.1
+    dev: false
+
+  /graphql/16.3.0:
+    resolution: {integrity: sha512-xm+ANmA16BzCT5pLjuXySbQVFwH3oJctUVdy81w1sV0vBU0KgDdBGtxQOUd5zqOBk/JayAFeG8Dlmeq74rjm/A==}
+    engines: {node: ^12.22.0 || ^14.16.0 || >=16.0.0}
     dev: false
 
   /growl/1.10.5:
